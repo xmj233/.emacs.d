@@ -13,6 +13,8 @@
 
 ;;(setq initial-frame-alist (quote ((fullscreen . maximized))))
 
+(load-theme 'leuven t)
+
 
 
 (provide 'init-ui)
