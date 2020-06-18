@@ -14,6 +14,10 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
 
+;;counsel-git-grep
+;;ibuffer
+;;kill-biffer   C-x k
+
 
 
 

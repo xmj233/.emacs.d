@@ -12,6 +12,11 @@
 		swiper
 		counsel
 		smartparens
+		;;mark
+		expand-region
+		;;edit at same time C-;
+		iedit
+		;;"弹出窗口"管理器
 		popwin
 		;; --- Major Mode ---
 	
@@ -48,7 +53,11 @@
 (setq enable-recursive-minibuffers t)
 
 ;;paren
-(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(smartparens-global-mode t)
+;;unmatch '
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+
 
 ;;popwin
 (require 'popwin)
