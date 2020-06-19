@@ -8,6 +8,7 @@
  (defvar my/packages '(
 		;; --- Auto-completion ---
 		company
+		      
 		;; --- Better Editor ---
 		swiper
 		counsel
@@ -18,6 +19,14 @@
 		iedit
 		;;"弹出窗口"管理器
 		popwin
+		;;
+		org-pomodoro
+		;;apt install ag
+		helm-ag
+		;;npm install -g eslint
+		flycheck
+		
+		
 		;; --- Major Mode ---
 	
 		;; --- Minor Mode ---
@@ -57,6 +66,8 @@
 (smartparens-global-mode t)
 ;;unmatch '
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+
+;;flycheck
 
 
 ;;popwin

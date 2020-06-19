@@ -61,6 +61,7 @@
 ;;d 标记删除
 ;;u 取消标记
 ;;x 执行所有的标记
+;;C-x C-q to edit
 (require 'dired-x)
 ;;可以使当一个窗口（frame）中存在两个分屏 （window）时，将另一个分屏自动设置成拷贝地址的目标。
 (setq dired-dwin-target 1)
