@@ -25,6 +25,10 @@
 		helm-ag
 		;;npm install -g eslint
 		flycheck
+		yasnippet
+		yasnippet-snippets
+
+
 		
 		
 		;; --- Major Mode ---
@@ -54,6 +58,8 @@
 
 (global-company-mode t)
 
+
+
 ;;(load-theme 'monokai t)
 
 ;;counsel and swiper
@@ -68,7 +74,12 @@
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;;flycheck
+(add-hook 'c-mode-hook 'flycheck-mode)
 
+;;yasnippet
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;;popwin
 (require 'popwin)
