@@ -1,7 +1,9 @@
 (when (>= emacs-major-version 24)
      (require 'package)
      (setq package-archives '(
-		      ("melpa" . "https://elpa.emacs-china.org/melpa/"))))
+			     ;; ("gnu"   . "http://elpa.emacs-china.org/gnu/")
+			      ("melpa" . "http://elpa.emacs-china.org/melpa/")
+			      )))
  (require 'cl)
 
  ;; Add Packages
@@ -27,6 +29,7 @@
 		flycheck
 		yasnippet
 		yasnippet-snippets
+		use-package
 
 
 		
@@ -57,6 +60,9 @@
 
 
 (global-company-mode t)
+(add-hook 'c-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-clang company-anaconda))))
 
 
 
@@ -72,6 +78,7 @@
 (smartparens-global-mode t)
 ;;unmatch '
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+(sp-local-pair 'emacs-lisp-mode "`" nil :actions nil)
 
 ;;flycheck
 (add-hook 'c-mode-hook 'flycheck-mode)
