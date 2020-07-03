@@ -7,12 +7,18 @@
 (setq recent-max-menu-items 10)
 
 ;;光标在括号内时就高亮包含内容的两个括号  show-paren-mode extend
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
+;;(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+;;"Highlight enclosing parens."
+;;(cond ((looking-at-p "\\s(") (funcall fn))
+;;	(t (save-excursion
+;;	     (ignore-errors (backward-up-list))
+;;	     (funcall fn)))))
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
 	(t (save-excursion
 	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+	     ad-do-it)))
+  )
 ;;高亮括号   show-paren-mode
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
