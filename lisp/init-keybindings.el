@@ -8,7 +8,7 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 
-(global-set-key (kbd "C-c p f") 'counsel-git)
+;;(global-set-key (kbd "C-c p f") 'counsel-git)
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
@@ -37,7 +37,7 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 
 ;;iedit
-(global-set-key (kbd "C-;") 'iedit-mode)
+(global-set-key (kbd "M-s e") 'iedit-mode)
 
 ;; Company-mode 中使用 C-n 与 C-p 来选择补全项
 (with-eval-after-load 'company
@@ -47,11 +47,18 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 ;;helm-ag
-(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+;;(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
 
 ;;auto-yasnippet
 (global-set-key (kbd "H-w") #'aya-create)
 (global-set-key (kbd "H-y") #'aya-expand)
+
+;;evil-nerd-commenter
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+
+
+(which-key-mode 1)
 
 
 (provide 'init-keybindings)

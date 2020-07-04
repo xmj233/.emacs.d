@@ -16,7 +16,7 @@
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
-(load-theme 'solarized-wombat-dark t)
+(load-theme 'dracula t)
 
 
 
