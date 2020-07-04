@@ -14,7 +14,6 @@
 
 (global-set-key (kbd "s-/") 'hippie-expand)
 
-(global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; enable this if you want `swiper' to use it
 ;; (setq search-default-mode #'char-fold-to-regexp)
@@ -31,6 +30,8 @@
 
 ;;expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 ;;org-capture
 (global-set-key (kbd "C-c c") 'org-capture)

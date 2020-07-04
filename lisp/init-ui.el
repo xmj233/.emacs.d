@@ -1,3 +1,6 @@
+;; 更改显示字体大小 16pt
+;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
+(set-face-attribute 'default nil :height 110)
 
 (tool-bar-mode -1)
 
@@ -11,9 +14,9 @@
 
 (setq-default cursor-type 'bar)
 
-;;(setq initial-frame-alist (quote ((fullscreen . maximized))))
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
 
-(load-theme 'leuven t)
+(load-theme 'solarized-wombat-dark t)
 
 
 

@@ -1,4 +1,5 @@
 (source "melpa" "http://elpa.emacs-china.org/melpa/")
+(source "gnu"   "http://elpa.emacs-china.org/gnu/")
 
 (depends-on "alert")
 (depends-on "ansi")
@@ -13,6 +14,7 @@
 (depends-on "f")
 (depends-on "flycheck")
 (depends-on "gntp")
+(depends-on "gnu-elpa-keyring-update")
 (depends-on "helm")
 (depends-on "helm-ag")
 (depends-on "helm-core")

@@ -19,9 +19,11 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load-file custom-file)
 
-;;counsel-git-grep
-;;ibuffer
-;;kill-biffer   C-x k
+
+;;helm-ag package need to (apt-get install silversearcher-ag)
+;;flycheck package need to download eslint(https://github.com/eslint/eslint)
+
+;;(setq package-check-signature nil)
 
 
 
